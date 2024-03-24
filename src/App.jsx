@@ -80,7 +80,7 @@ export default function App() {
         <div className="container-for-coins">
           <img src="./public/first-coin-image.png" alt="" />
           {coinsCount}
-        </div>
+        </div> 
         <div className="level">
           Ваш уровень: {level} <strong>| </strong> <br />
           {progress} / 70
