@@ -77,7 +77,7 @@
     .shop{
         .list-shop{
             margin-left: -50px;
-            gap: 3px !important;
+            gap: 5px !important;
         }
     }
 }

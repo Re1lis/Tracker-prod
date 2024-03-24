@@ -44,7 +44,7 @@ function Shop ({ coinsCount, setCoinsCount, downCountCoins, setSelectedAvatar, i
       <ul className="list-shop">
         {items.map((item, index) => (
           <li key={index}>
-            <img src={item.image} alt={`Avatar ${index}`} /> <br />
+            <img src={item.image} alt={"Аватар для вашего профиля"} /> <br />
             {isItemPurchased(index) ? (
               <button onClick={() => returnItem(index)}>Вернуть</button>
             ) : (
