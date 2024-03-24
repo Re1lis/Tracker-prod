@@ -73,7 +73,14 @@
 }
 
 
-
+@media (max-width: 900px){
+    .shop{
+        .list-shop{
+            margin-left: -50px;
+            gap: 3px !important;
+        }
+    }
+}
 
 @media (max-width: 730px){
 
