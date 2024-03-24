@@ -78,7 +78,7 @@ export default function App() {
         <h1 className="main-title">Tracker привычек</h1>
         
         <div className="container-for-coins">
-          <img src="../public/first-coin-image.png" alt="" />
+          <img src="./public/first-coin-image.png" alt="" />
           {coinsCount}
         </div>
         <div className="level">
