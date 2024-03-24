@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kablammo&family=Reggae+One&family=Rubik+Marker+Hatch&family=Rubik+Scribble&family=Ruslan+Display&family=Unbounded:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kablammo&family=Poiret+One&family=Reggae+One&family=Rubik+Marker+Hatch&family=Rubik+Scribble&family=Ruslan+Display&family=Unbounded:wght@200..900&display=swap');
+
+.title-section{
+    font-family: 'Unbounded', sans-serif;
+    color: #EC7D0D;
+    font-size: 50px;
+    text-align: center;
+    text-shadow: 0px 2px 5px black;
+    margin-bottom: 30px; 
+}
+
+.goals-tasks-container{
+    display: flex;
+    gap: 100px;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+    .small-container-with-input-and-label{
+        color: white;
+        font-family: 'Poiret One', sans-serif;
+        font-size: 25px;
+        font-weight: 600;
+        
+        
+        .input-date-or-time{
+            text-align: center;
+            width: 200px;
+            margin-right: 10px;
+            font-family: 'Unbounded', sans-serif;
+            padding: 5px;
+            border-radius: 20px;
+            border: none;
+            outline: none;
+            box-shadow: 0 0 10px black;
+        }
+    }
+    
+    .button-for-delete-or-add{
+        margin-top: 20px;
+        margin-bottom: 10px;
+        background: gray;
+        border: none;
+        font-family: 'Unbounded', sans-serif;
+        color: black;
+        transition-duration: 0.2s;
+        padding: 10px;
+        border-radius: 20px;
+        font-size: 15px;
+        box-shadow: 0 0 10px black;
+    
+        &:hover{
+            transform: scale(0.95);
+            color: white;
+            box-shadow:  0 0 10px white;
+        }
+    
+        &:active{
+            transform: scale(1);
+        }
+    }
+    
+
+    .list-array-container{
+        height: 500px;
+        overflow-y: auto;
+        list-style-type: none;
+        padding-right: 10px;
+          
+        
+        .goal-item-container{
+            
+            margin-bottom: 10px;
+            box-shadow: inset 0 0 10px black;
+            border-radius: 20px;
+            padding: 10px;
+            transition-duration: 0.5s;
+    
+            &:hover{
+                box-shadow: inset 0 0 10px gray;
+            }
+    
+            span {
+                color: white;
+                font-size: 20px;
+                font-family: 'Unbounded', sans-serif;            
+            }
+    
+    
+            input {
+                margin-left: 10px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    
+    .subtitle{
+        letter-spacing: 2px;
+        font-size: 27px;
+        font-family: 'Handjet', sans-serif;
+        color: white;
+        margin-bottom: 20px;
+    }
+    
+    .selected-goals{
+        padding: 10px;
+        height: 300px;
+        overflow-y: auto;
+        list-style-type: circle;
+        box-shadow: inset 0 0 10px black;
+        border-radius: 20px;
+        width: 500px;
+          
+    
+        .title-goal{
+            font-family: 'Unbounded', sans-serif;
+            font-size: 15px;
+            color: white;
+            
+        }
+    
+        .start-date-time, .end-date-time {
+            font-size: 20px;
+            font-family: 'Handjet', sans-serif;
+            padding-left: 7px;
+            color: white;
+        }
+        .end-date-time{
+            margin-right: 10px;
+        }
+    }
+
+
+    .text-statistic{
+        font-size: 20px;
+        font-family: 'Poiret One', sans-serif;
+        color: white;
+        font-weight: 500;
+    }
+
+
+
+@media (max-width: 1170px){
+    .goals-tasks-container{
+        display: block;
+    }
+    .selected-goals{
+        width: 90%;
+    }
+}

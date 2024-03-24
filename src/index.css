@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kablammo&family=Reggae+One&family=Rubik+Marker+Hatch&family=Rubik+Scribble&family=Ruslan+Display&family=Unbounded:wght@200..900&display=swap');
+
+
+
+body{
+  margin: 0 100px;
+  padding: 0;
+  box-sizing: border-box;
+  background: #2C2C46;
+
+  h1, h2, h3, h4, h5, h6{
+    margin: 0;
+    padding: 0; 
+  }
+}
+
+
+.header{
+  border-radius: 0 0 30px 30px;
+  box-shadow: 0 0 10px black;
+  background: #2C2C46;
+  flex-wrap: wrap;
+  gap: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px 20px;
+  align-items: center;
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+  position: sticky;
+  top: 0;
+  max-height: 100px;
+
+
+  .main-title{
+    font-family: 'Unbounded', sans-serif;
+    font-size: 1.5vw;
+    margin: 0;
+    padding: 0;
+  }
+
+
+  .container-for-coins{
+    cursor: default;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 0 10px black;
+    border-radius: 30px;
+    font-family: 'Unbounded', sans-serif;
+    font-size: 25px;
+    transition-duration: 0.5s;
+
+    &:hover{
+      color: #EC7D0D;
+      box-shadow:  0 0 10px white;
+      transform: scale(1.1);
+      border-radius: 50px;
+    }
+
+    img{
+      width: 70px;
+      height: 70px;
+    }
+  }
+
+  .level{
+    font-family: 'Poiret One', sans-serif;
+    font-size: 20px;
+  }
+
+
+}
+
+#home-section-href{
+  width: 1px;
+  
+}
+
+.level-up-notification {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  font-family: 'Unbounded', sans-serif;
+  font-size: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  text-align: center;
+  opacity: 0; 
+  animation: fadeIn 0.5s ease-in-out forwards; 
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.level-up-notification p {
+  color: #333;
+  font-size: 18px;
+}
+
+
+
+
+
+
+.new-level-reached {
+  background-color: black; 
+  transition:  3s ease; 
+  color: white !;
+
+  .item-list{
+    a{
+      color: white;
+    }
+  }
+}
+
+
+@media (max-width: 900px){
+  body{
+    margin: 0 20px !important;
+  }
+}
+
+
+@media (max-width: 700px) {
+  .title-section{
+    font-size: 25px !important;
+  }
+  .container-for-coins{
+    padding: 2px !important;
+    font-size: 17px !important;
+    img{
+      height: 25px !important;
+      width: 25px !important;
+    }
+  }
+  .level{
+    font-size: 17px !important;
+  }
+}

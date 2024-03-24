@@ -1,0 +1,108 @@
+.title-section{
+    font-family: 'Unbounded', sans-serif;
+    color: #EC7D0D;
+    font-size: 50px;
+    text-align: center;
+    text-shadow: 0px 2px 5px black;
+    margin-bottom: 30px;
+}
+
+.home-container{
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .time-date{
+        color: white;
+        font-family: 'Unbounded', sans-serif;
+        padding: 50px 20px 0 20px;
+        border: 10px solid orange;
+        border-radius: 30px;
+        box-shadow: inset 0 0 10px black;
+        margin-right: 20px;
+
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 150px;
+            width: 150px;
+            margin-bottom: 50px;
+            outline: 10px solid white;
+            text-align: center;
+            border-radius: 50%;
+            padding: 20px;
+        }
+    }
+
+    .image-text-container{
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+        box-shadow: inset 0 0 10px black;
+        padding: 30px;
+        border-radius: 50px;
+
+        img{
+            width: 500px;
+        }
+
+        .text-container{
+            color: white;
+
+            .text-about-person{
+                font-family: 'Unbounded', sans-serif;
+                text-align: center;
+                font-size: 30px;
+                margin-bottom: 30px;
+            }
+           .text-about-site{
+            font-family: 'Poiret One', sans-serif;
+            font-size: 20px;
+
+            span{
+                font-family: 'Unbounded', sans-serif;
+                font-size: 25px;
+            }
+           } 
+        }
+    }
+
+
+}
+
+
+@media (max-width: 1400px){
+    .image-text-container{
+        display: block !important;
+
+    }
+}
+
+
+@media (max-width: 1170px) {
+    .home-container{
+        display: block;
+        img{
+            display: none   ;
+        }
+        .time-date{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media (max-width: 900px){
+    .time-date{
+        display: block !important;
+        div{
+            width: 85% !important;
+            border-radius: 20px !important;
+            height: 150px !important; 
+        }
+    }
+}
