@@ -51,18 +51,18 @@ export default function App() {
   localStorage.setItem('progress', JSON.parse(progress))
 
   const items = [
-    { price: 10, image: "../public/avatars/avatar-sheep.png" },
-    { price: 15, image: "../public/avatars/bear-avatar.png" },
-    { price: 25, image: "../public/avatars/tiger-avatar.png" },
-    { price: 35, image: "../public/avatars/sheep-avatar-second.png" },
-    { price: 50, image: "../public/avatars/dog-avatar-second.png" },
-    { price: 50, image: "../public/avatars/dog-avatar-first.png" },
-    { price: 70, image: "../public/avatars/hadgehog-avatar.png" },
-    { price: 85, image: "../public/avatars/elk-avatar.png" },
-    { price: 90, image: "../public/avatars/cat-avatar-first.png" },
-    { price: 95, image: "../public/avatars/cat-avatar-second.png" },
-    { price: 95, image: "../public/avatars/cat-avatar-third.png" },
-    { price: 100, image: "../public/avatars/cookie-avatar.png" },
+    { price: 10, image: "./public/avatars/avatar-sheep.png" },
+    { price: 15, image: "./public/avatars/bear-avatar.png" },
+    { price: 25, image: "./public/avatars/tiger-avatar.png" },
+    { price: 35, image: "./public/avatars/sheep-avatar-second.png" },
+    { price: 50, image: "./public/avatars/dog-avatar-second.png" },
+    { price: 50, image: "./public/avatars/dog-avatar-first.png" },
+    { price: 70, image: "./public/avatars/hadgehog-avatar.png" },
+    { price: 85, image: "./public/avatars/elk-avatar.png" },
+    { price: 90, image: "./public/avatars/cat-avatar-first.png" },
+    { price: 95, image: "./public/avatars/cat-avatar-second.png" },
+    { price: 95, image: "./public/avatars/cat-avatar-third.png" },
+    { price: 100, image: "./public/avatars/cookie-avatar.png" },
   ];
 
   const resetSelectedAvatar = () => {
@@ -75,7 +75,7 @@ export default function App() {
         <h1 className="main-title">Tracker привычек</h1>
         
         <div className="container-for-coins">
-          <img src="../public/first-coin-image.png" alt="" />
+          <img src="./public/first-coin-image.png" alt="" />
           {coinsCount}
         </div>
         <div className="level">
