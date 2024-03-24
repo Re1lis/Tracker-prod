@@ -156,7 +156,7 @@ const GoalList = ({ updateCountCoins, changeProgress, downCountCoins }) => {
       <div className='goals-tasks-container'>
       <div className = 'list-input-container'>
       <h2 className='subtitle'>Добавить новую привычку</h2>
-      <div className='small-container-with-input-and-label'>
+      <div className='small-container-with-input-and-label custom-goal'>
         <label>Название привычки: </label>
         <input
             className="input-date-or-time"
@@ -165,7 +165,7 @@ const GoalList = ({ updateCountCoins, changeProgress, downCountCoins }) => {
           onChange={(e) => setNewGoalName(e.target.value)}
         />
       </div>
-      <div className='small-container-with-input-and-label'>
+      <div className='small-container-with-input-and-label custom-goal'>
         <label>Дата начала: </label>
         <input
           className="input-date-or-time"
@@ -182,7 +182,7 @@ const GoalList = ({ updateCountCoins, changeProgress, downCountCoins }) => {
           onChange={(e) => setNewGoalStartTime(e.target.value)}
         />
       </div>
-      <div className='small-container-with-input-and-label'>
+      <div className='small-container-with-input-and-label custom-goal'>
         <label>Дата окончания: </label>
         <input
           className="input-date-or-time"

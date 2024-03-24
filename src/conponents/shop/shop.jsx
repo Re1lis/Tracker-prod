@@ -6,7 +6,7 @@ function Shop ({ coinsCount, setCoinsCount, downCountCoins, setSelectedAvatar, i
   const [modalMessage, setModalMessage] = useState("");
   const [purchasedItemIndex, setPurchasedItemIndex] = useState(null);
   const [lastPurchasedItemIndex, setLastPurchasedItemIndex] = useState(null);
-  const [purchasedItems, setPurchasedItems] = useState([]); // Состояние для отслеживания купленных предметов
+  const [purchasedItems, setPurchasedItems] = useState([]);
 
 
 
@@ -22,7 +22,7 @@ function Shop ({ coinsCount, setCoinsCount, downCountCoins, setSelectedAvatar, i
       setPurchasedItemIndex(itemIndex);
       setLastPurchasedItemIndex(itemIndex);
       setSelectedAvatar(itemIndex);
-      setPurchasedItems([...purchasedItems, itemIndex]); // Добавляем индекс купленного предмета в состояние
+      setPurchasedItems([...purchasedItems, itemIndex]); 
     } else {
       setModalMessage("Недостаточно пряникcов для покупки.");
       setShowModal(true);
@@ -31,11 +31,11 @@ function Shop ({ coinsCount, setCoinsCount, downCountCoins, setSelectedAvatar, i
 
   const returnItem = (itemIndex) => {
     setCoinsCount(coinsCount + items[itemIndex].price);
-    setPurchasedItems(purchasedItems.filter(index => index !== itemIndex)); // Удаляем индекс возвращенного предмета из состояния
+    setPurchasedItems(purchasedItems.filter(index => index !== itemIndex)); 
     resetSelectedAvatar();
   };
 
-  const isItemPurchased = (index) => purchasedItems.includes(index); // Проверяем, куплен ли предмет
+  const isItemPurchased = (index) => purchasedItems.includes(index); 
 
   return (
     <div className="shop" id="shop-section">

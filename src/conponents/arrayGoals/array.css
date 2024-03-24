@@ -150,3 +150,13 @@
         width: 90%;
     }
 }
+
+
+@media (max-width: 420px){
+    .custom-goal{
+        text-align: center;
+        input{
+            width: 100% !important;
+        }
+    }
+}

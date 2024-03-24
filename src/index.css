@@ -153,3 +153,11 @@ body{
     font-size: 17px !important;
   }
 }
+
+@media (max-width: 500px) {
+    .header{
+      .main-title{
+        font-size: 15px !important;
+      }
+    }
+}

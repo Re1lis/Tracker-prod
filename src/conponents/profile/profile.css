@@ -108,11 +108,26 @@
 }
 
 @media (max-width: 420px){
+    body{
+        padding: 10px !important;
+    }
     .information-input{
-        display: block;
-        input{
-            width: 170px;
+
+        .input-form-label{
+            display: block !important; 
+            text-align: center;
+            input{
+                margin-top: 7px;
+                width: 90%;
+            }
         }
+
+
     }
 
+    button{
+        margin-top: 5px;
+        margin-bottom: 20px;
+        width: 100%;
+    }
 }

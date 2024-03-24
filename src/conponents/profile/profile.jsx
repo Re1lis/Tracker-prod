@@ -159,7 +159,7 @@ export default function ProfileUser ({ selectedAvatar, items }) {
             <p>Рост: {userData.height}</p>
           </div>
 
-          <div>
+          <div className='search-friends'>
             <input type="text" placeholder="Найти друзей" />
             <button onClick={handleSearch}>Начать поиск</button>
           </div>
