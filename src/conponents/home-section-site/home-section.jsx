@@ -18,7 +18,7 @@ export default function HomeSection () {
                         <Clock/>
                 </div>
                 <div className="image-text-container">
-                <img src="../public/persong-image-second.png" alt="" />
+                <img src="./public/persong-image-second.png" alt="" />
                 <div className="text-container">
                     <h3 className="text-about-person">Привет, меня зовут Боб. Давай я тебе немного расскажу о чем весь этот сайт, а также, что тут можно делать.</h3>
                     <p className="text-about-site">
