@@ -51,21 +51,21 @@ export default function App() {
   localStorage.setItem('progress', JSON.parse(progress))
 
   const items = [
-    { price: 15, image: "../public/avatars/avatar-sheep.png" },
-    { price: 25, image: "../public/avatars/bear-avatar.png" },
-    { price: 40, image: "../public/avatars/tiger-avatar.png" },
-    { price: 50, image: "../public/avatars/sheep-avatar-second.png" },
-    { price: 60, image: "../public/avatars/dog-avatar-second.png" },
-    { price: 70, image: "../public/avatars/dog-avatar-first.png" },
-    { price: 80, image: '../public/avatars/bird-avatar.png'},
-    { price: 85, image: "../public/avatars/hadgehog-avatar.png" },
-    { price: 90, image: "../public/avatars/foxy-avatar.png"},
-    { price: 95, image: "../public/avatars/elk-avatar.png" },
-    { price: 100, image: "../public/avatars/wolf-avatar.png"},
-    { price: 110, image: "../public/avatars/cat-avatar-first.png" },
-    { price: 115, image: "../public/avatars/cat-avatar-second.png" },
-    { price: 130, image: "../public/avatars/cat-avatar-third.png" },
-    { price: 150, image: "../public/avatars/cookie-avatar.png" },
+    { price: 15, image: "./public/avatars/avatar-sheep.png" },
+    { price: 25, image: "./public/avatars/bear-avatar.png" },
+    { price: 40, image: "./public/avatars/tiger-avatar.png" },
+    { price: 50, image: "./public/avatars/sheep-avatar-second.png" },
+    { price: 60, image: "./public/avatars/dog-avatar-second.png" },
+    { price: 70, image: "./public/avatars/dog-avatar-first.png" },
+    { price: 80, image: './public/avatars/bird-avatar.png'},
+    { price: 85, image: "./public/avatars/hadgehog-avatar.png" },
+    { price: 90, image: "./public/avatars/foxy-avatar.png"},
+    { price: 95, image: "./public/avatars/elk-avatar.png" },
+    { price: 100, image: "./public/avatars/wolf-avatar.png"},
+    { price: 110, image: "./public/avatars/cat-avatar-first.png" },
+    { price: 115, image: "./public/avatars/cat-avatar-second.png" },
+    { price: 130, image: "./public/avatars/cat-avatar-third.png" },
+    { price: 150, image: "./public/avatars/cookie-avatar.png" },
   ];
 
   const resetSelectedAvatar = () => {
@@ -78,7 +78,7 @@ export default function App() {
         <h1 className="main-title">Tracker привычек</h1>
         
         <div className="container-for-coins">
-          <img src="./public/first-coin-image.png" alt="" />
+          <img src="../public/first-coin-image.png" alt="" />
           {coinsCount}
         </div>
         <div className="level">
