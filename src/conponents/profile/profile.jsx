@@ -37,7 +37,7 @@ export default function ProfileUser ({ selectedAvatar, items }) {
     
   };
 
-  const handleInputChange = (e) => {
+  const inputChange = (e) => {
     const { name, value } = e.target;
     setUserData(prevState => ({
       ...prevState,
@@ -45,7 +45,7 @@ export default function ProfileUser ({ selectedAvatar, items }) {
     }));
   };
 
-  const handleSaveEdit = () => {
+  const saveEdit = () => {
     saveDataToLocalStorage(userData); 
     setIsEditMode(!isEditMode);
     if (!isEditMode) {
@@ -77,7 +77,7 @@ export default function ProfileUser ({ selectedAvatar, items }) {
               id="name"
               name="name"
               value={userData.name}
-              onChange={handleInputChange}
+              onChange={inputChange}
               disabled={!isEditMode}
               placeholder="Введите имя"
             />
@@ -90,7 +90,7 @@ export default function ProfileUser ({ selectedAvatar, items }) {
               name="surname"
               placeholder="Введите фамилию"
               value={userData.surname}
-              onChange={handleInputChange}
+              onChange={inputChange}
               disabled={!isEditMode}
             />
           </div>
@@ -101,7 +101,7 @@ export default function ProfileUser ({ selectedAvatar, items }) {
               id="email"
               name="email"
               value={userData.email}
-              onChange={handleInputChange}
+              onChange={inputChange}
               disabled={!isEditMode}
               placeholder="Введите почту"
             />
@@ -113,7 +113,7 @@ export default function ProfileUser ({ selectedAvatar, items }) {
               id="years"
               name="years"
               value={userData.years}
-              onChange={handleInputChange}
+              onChange={inputChange}
               disabled={!isEditMode}
               placeholder="Введите возраст"
             />
@@ -125,7 +125,7 @@ export default function ProfileUser ({ selectedAvatar, items }) {
               id="name"
               name="height"
               value={userData.height}
-              onChange={handleInputChange}
+              onChange={inputChange}
               disabled={!isEditMode}
               placeholder="Введите свой рост"
             />
@@ -133,7 +133,7 @@ export default function ProfileUser ({ selectedAvatar, items }) {
           <div>
             {isEditMode ? (
               <>
-                <button onClick={handleSaveEdit}>Сохранить данные</button>
+                <button onClick={saveEdit}>Сохранить данные</button>
                 <button onClick={() => { setIsEditMode(!isEditMode); handleCancelEdit(); }}>Отмена</button>
               </>
             ) : (

@@ -41,8 +41,8 @@ const GoalList = ({ updateCountCoins, changeProgress, downCountCoins }) => {
     return () => clearInterval(interval);
   }, []);
 
-  const handleRemoveAndChangeCounter = (index, goal) => {
-    handleRemoveGoal(index);
+  const removeAndChangeCounter = (index, goal) => {
+    removeGoal(index);
     if (!isTimeExpired(goal)) {
       updateCountCoins();
       changeProgress()
@@ -81,13 +81,13 @@ const GoalList = ({ updateCountCoins, changeProgress, downCountCoins }) => {
   const [statsUnfulfilledGoals, setStatsUnfulfilledGoals ] = useState(parseInt(localStorage.getItem('statsUnfulfilledGoals')) || 0)
   const [stateCompletedGoals, setStateCompletedGoals] = useState(parseInt(localStorage.getItem('stateCompletedGoals')) || 0)
 
-  const handleChangeTime = (index, timeType, newTime) => {
+  const changeTime = (index, timeType, newTime) => {
     const newGoals = [...goals];
     newGoals[index][timeType] = newTime;
     setGoals(newGoals);
   };
 
-  const handleChangeDate = (index, dateType, newDate) => {
+  const changeDate = (index, dateType, newDate) => {
     const currentDate = new Date().toISOString().split('T')[0];
     if (newDate >= currentDate) {
       const newGoals = [...goals];
@@ -96,21 +96,20 @@ const GoalList = ({ updateCountCoins, changeProgress, downCountCoins }) => {
     }
   };
 
-  const handleRemoveGoal = (index) => {
+  const removeGoal = (index) => {
     const selectedGoal = selectedGoals[index];
     if (selectedGoal.name === 'Не выполнено') {
-
     } else {
       setSelectedGoals((prevGoals) => prevGoals.filter((_, i) => i !== index));
     }
   };
 
-  const handleAddGoal = (index) => {
+  const addGoal = (index) => {
     setSelectedGoals((prevGoals) => [...prevGoals, goals[index]]);
     setStatsAllGoals(statsAllGoals + 1)
   };
 
-  const handleAddCustomGoal = () => {
+  const addCustomGoal = () => {
     const newGoal = {
       id: goals.length + 1,
       name: newGoalName,
@@ -133,7 +132,7 @@ const GoalList = ({ updateCountCoins, changeProgress, downCountCoins }) => {
   localStorage.setItem('statsUnfulfilledGoals', JSON.parse(statsUnfulfilledGoals))
   localStorage.setItem('selectedGoals', JSON.stringify(selectedGoals))
 
-  const handleResetStatsAndLocalStorage = () => {
+  const resetStatsAndLocalStorage = () => {
     setStatsAllGoals(0);
     setStateCompletedGoals(0);
     setStatsUnfulfilledGoals(0);
@@ -199,7 +198,7 @@ const GoalList = ({ updateCountCoins, changeProgress, downCountCoins }) => {
           onChange={(e) => setNewGoalEndTime(e.target.value)}
         />
       </div>
-      <button className="button-for-delete-or-add" onClick={handleAddCustomGoal}>Добавить привычку</button>
+      <button className="button-for-delete-or-add" onClick={addCustomGoal}>Добавить привычку</button>
 
       <h2 className='subtitle'>Список привычек</h2>
       <ul className='list-array-container'>
@@ -214,14 +213,14 @@ const GoalList = ({ updateCountCoins, changeProgress, downCountCoins }) => {
                   type="date"
                   value={goal.startDate}
                   min={new Date().toISOString().split('T')[0]}
-                  onChange={(e) => handleChangeDate(index, 'startDate', e.target.value)}
+                  onChange={(e) => changeDate(index, 'startDate', e.target.value)}
                 />
                 <label>Время начала:</label>
                 <input
                   className="input-date-or-time"
                   type="time"
                   value={goal.startTime}
-                  onChange={(e) => handleChangeTime(index, 'startTime', e.target.value)}
+                  onChange={(e) => changeTime(index, 'startTime', e.target.value)}
                 />
               </div>
               <div className='small-container-with-input-and-label'>
@@ -231,17 +230,17 @@ const GoalList = ({ updateCountCoins, changeProgress, downCountCoins }) => {
                   type="date"
                   value={goal.endDate}
                   min={goal.startDate}
-                  onChange={(e) => handleChangeDate(index, 'endDate', e.target.value)}
+                  onChange={(e) => changeDate(index, 'endDate', e.target.value)}
                 />
                 <label>Время окончания:</label>
                 <input
                   className="input-date-or-time"
                   type="time"
                   value={goal.endTime}
-                  onChange={(e) => handleChangeTime(index, 'endTime', e.target.value)}
+                  onChange={(e) => changeTime(index, 'endTime', e.target.value)}
                 />
               </div>
-              <button className="button-for-delete-or-add" onClick={() => handleAddGoal(index)}>Добавить привычку</button>
+              <button className="button-for-delete-or-add" onClick={() => addGoal(index)}>Добавить привычку</button>
             </div>
           </li>
         ))}
@@ -256,7 +255,7 @@ const GoalList = ({ updateCountCoins, changeProgress, downCountCoins }) => {
                 <span className='title-goal'>Привычка: {goal.name} |</span>
                 <span className='start-date-time'> Начало: {goal.startDate} {goal.startTime} |</span>
                 <span className='end-date-time'> Окончание: {goal.endDate} {goal.endTime} |</span>
-                <button className="button-for-delete-or-add" onClick={() => handleRemoveAndChangeCounter(index, goal)}>
+                <button className="button-for-delete-or-add" onClick={() => removeAndChangeCounter(index, goal)}>
                   {isTimeExpired(goal) ? 'Не выполнено' : 'Выполнено'}
                 </button>
               </div>
@@ -270,7 +269,7 @@ const GoalList = ({ updateCountCoins, changeProgress, downCountCoins }) => {
         <br />
         <h3 className="text-statistic">Количество невыполненных привычек {statsUnfulfilledGoals}</h3>
          <br />
-         <button className="button-for-delete-or-add" onClick={handleResetStatsAndLocalStorage}>
+         <button className="button-for-delete-or-add" onClick={resetStatsAndLocalStorage}>
             Сбросить статистику (восстановить ее уже не получится)
         </button>
       </div>
