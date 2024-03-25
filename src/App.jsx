@@ -51,21 +51,21 @@ export default function App() {
   localStorage.setItem('progress', JSON.parse(progress))
 
   const items = [
-    { price: 15, image: "./public/avatars/avatar-sheep.png" },
-    { price: 25, image: "./public/avatars/bear-avatar.png" },
-    { price: 40, image: "./public/avatars/tiger-avatar.png" },
-    { price: 50, image: "./public/avatars/sheep-avatar-second.png" },
-    { price: 60, image: "./public/avatars/dog-avatar-second.png" },
+    { price: 15, image: "avatars/avatar-sheep.png" },
+    { price: 25, image: "avatars/bear-avatar.png" },
+    { price: 40, image: "avatars/tiger-avatar.png" },
+    { price: 50, image: "avatars/sheep-avatar-second.png" },
+    { price: 60, image: "avatars/dog-avatar-second.png" },
     { price: 70, image: "./public/avatars/dog-avatar-first.png" },
-    { price: 80, image: './public/avatars/bird-avatar.png'},
-    { price: 85, image: "./public/avatars/hadgehog-avatar.png" },
-    { price: 90, image: "./public/avatars/foxy-avatar.png"},
-    { price: 95, image: "./public/avatars/elk-avatar.png" },
-    { price: 100, image: "./public/avatars/wolf-avatar.png"},
-    { price: 110, image: "./public/avatars/cat-avatar-first.png" },
-    { price: 115, image: "./public/avatars/cat-avatar-second.png" },
-    { price: 130, image: "./public/avatars/cat-avatar-third.png" },
-    { price: 150, image: "./public/avatars/cookie-avatar.png" },
+    { price: 80, image: 'avatars/bird-avatar.png'},
+    { price: 85, image: "avatars/hadgehog-avatar.png" },
+    { price: 90, image: "avatars/foxy-avatar.png"},
+    { price: 95, image: "avatars/elk-avatar.png" },
+    { price: 100, image: "avatars/wolf-avatar.png"},
+    { price: 110, image: "avatars/cat-avatar-first.png" },
+    { price: 115, image: "avatars/cat-avatar-second.png" },
+    { price: 130, image: "avatars/cat-avatar-third.png" },
+    { price: 150, image: "avatars/cookie-avatar.png" },
   ];
 
   const resetSelectedAvatar = () => {

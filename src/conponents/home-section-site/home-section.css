@@ -85,7 +85,7 @@
     .home-container{
         display: block;
         img{
-            display: none   ;
+            
         }
         .time-date{
             display: flex;
@@ -97,6 +97,7 @@
 }
 
 @media (max-width: 900px){
+
     .time-date{
         display: block !important;
         margin-right: 5px;
@@ -107,5 +108,11 @@
             border-radius: 20px !important;
             height: 150px !important; 
         }
+    }
+}
+
+@media (max-width: 580px){
+    img{
+        width: 270px !important;
     }
 }
