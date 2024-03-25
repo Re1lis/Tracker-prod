@@ -3,7 +3,7 @@ import './array.css'
 
 const GoalList = ({ updateCountCoins, changeProgress, downCountCoins }) => {
   const [goals, setGoals] = useState([
-    {id: 1, name:"Проубуждение каждый день в одно и то же время", startTime: '06:00', endTime: '09:00', startDate: new Date().toISOString().split('T')[0], endDate: new Date().toISOString().split('T')[0]  },
+    {id: 1, name:"Пробуждение каждый день в одно и то же время", startTime: '06:00', endTime: '09:00', startDate: new Date().toISOString().split('T')[0], endDate: new Date().toISOString().split('T')[0]  },
     {id: 2, name:"Физические упражнения в течение 15-30 минут", startTime: '07:00', endTime: '09:00', startDate: new Date().toISOString().split('T')[0], endDate: new Date().toISOString().split('T')[0]  },
     {id: 3, name:"Полезный завтрак", startTime: '06:00', endTime: '09:00', startDate: new Date().toISOString().split('T')[0], endDate: new Date().toISOString().split('T')[0]  },
     {id: 4, name:"Планирование дня и составление списка задач", startTime: '06:00', endTime: '09:00', startDate: new Date().toISOString().split('T')[0], endDate: new Date().toISOString().split('T')[0]  },
