@@ -99,3 +99,12 @@
         }
     }
 }
+
+@media (max-width: 600px){
+
+    .list-shop{
+        img{
+            width: 200px !important;
+        }
+    }
+}
