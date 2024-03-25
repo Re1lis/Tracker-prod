@@ -56,7 +56,7 @@ export default function App() {
     { price: 40, image: "avatars/tiger-avatar.png" },
     { price: 50, image: "avatars/sheep-avatar-second.png" },
     { price: 60, image: "avatars/dog-avatar-second.png" },
-    { price: 70, image: "./public/avatars/dog-avatar-first.png" },
+    { price: 70, image: "avatars/dog-avatar-first.png" },
     { price: 80, image: 'avatars/bird-avatar.png'},
     { price: 85, image: "avatars/hadgehog-avatar.png" },
     { price: 90, image: "avatars/foxy-avatar.png"},
