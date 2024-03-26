@@ -83,7 +83,7 @@ export default function ProfileUser ({ selectedAvatar, items }) {
             />
           </div>
           <div className="input-form-label">
-            <label htmlFor="surname">Почта: </label>
+            <label htmlFor="surname">Фамилия: </label>
             <input
               type="text"
               id="surname"
